@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Studio Repet</title>
+
+    <!-- Facebook OpenGraph -->
+
+  <meta property="og:title"         content="Studio Repet">
+  <meta property="og:image"         content="https://chatbotpage.firebaseapp.com/img/kiosque_fb_npp.jpg">
+  <meta property="og:description"   content="Découvrez les dernières sorties presse directement dans Facebook Messenger !" />
+
+
+    <!-- Semantic UI & jQuery -->
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="semantic/semantic.min.js"></script>
+
+    <!-- Calendar picker -->
+    <script type="text/javascript" src="node_modules/semantic-ui-calendar/dist/calendar.min.js"></script>
+    <link rel="stylesheet" href="node_modules/semantic-ui-calendar/dist/calendar.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- Facebook SDK for JavaScript -->
+    <script src="js/fb.js">  </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1879659535424286');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1879659535424286&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Hotjar Tracking Code for https://chatbotpage.firebaseapp.com/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:942914,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <!-- End Hotjar Tracking Code -->
+
+    <!-- Device CSS -->
+    <link rel="stylesheet" type="text/css" href="css/device.css">
+
+
+</head>
+
+
+<body class="site">
+
+<div class="main-content">
+
+  <div class="ui stackable padded centered grid" id="main-grid">
+
+    <div class="middle aligned centered row">
+
+      <div class="eight wide centered column">
+        <h2 class="ui massive header" id="title">
+          <div class="content">
+            Faites du bruit.
+          </div>
+        </h2>
+      </div>
+
+    </div>
+
+<!-- FORM
+    <div class="middle aligned centered row" id="form-container">
+
+      <div class="ui form">
+        <div class="fields">
+          <div class="field">
+            <label class="book-form">Où ?</label>
+            <input type="text" placeholder="First Name">
+          </div>
+
+          <div class="field">
+            <label class="book-form">Quel jour ?</label>
+            <div class="ui calendar datepicker">
+              <div class="ui input left icon">
+                <i class="calendar icon"></i>
+                <input id="#" type="text"  placeholder="Date">
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="book-form">Quelle heure ?</label>
+            <input type="text" placeholder="Last Name">
+          </div>
+        </div>
+      </div>
+
+    </div>
+-->
+
+    <div class="centered row">
+      <div id="alternate-button">
+        <button class="ui labeled icon big button pink" id="book-studio">
+          <i class="music icon"></i>
+          Réserver un studio
+        </button>       
+      </div>     
+    </div>     
+
+  </div>
+
+</div>
+
+
+<!-- FB Customer Chat Plugin -->
+
+<div
+  class="fb-customerchat"
+  attribution=setup_tool
+  page_id="603326973186287"
+  theme_color="#00adee"
+  logged_in_greeting="Salut ! Pour les sorties presse c'est par ici 👇"
+  logged_out_greeting="Salut ! Pour les sorties presse c'est par ici 👇">
+</div>
+
+
+<!-- Footer -->
+
+<div>
+    <div class="ui equal width stackable padded grid">
+      
+      <div class="mobile only black row"></div>
+ 
+
+      <div class="footer text-align center aligned black computer only row">
+        <div class="column">
+            <a target="_blank" href="https://www.facebook.com/newspayper.fr"><i class="large facebook f icon social"></i></a>
+            <a target="_blank" href="https://twitter.com/newspayper_fr"><i class="large twitter icon social"></i></a>
+            <a target="_blank" href="https://medium.com/newspayper"><i class="large medium m icon social"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/company/newspayper.fr/"><i class="large linkedin in icon social"></i></a>         
+        </div>
+        <div class="column">
+          <span>Made with <img class="ui mini spaced image" src="img/watermelon.png"> in Paris, France by </span><img class="ui spaced image" id="footer-logo" src="img/logo.png">          
+        </div>  
+        <div class="column">
+          <button class="ui inverted basic button" onclick="window.location.href='mailto:contact@newspayper.fr'">Professionels ? Contactez-nous !</button>          
+        </div>        
+      </div>
+
+      <div class="footer text-align center aligned black tablet only row">
+        <div class="column">
+            <a target="_blank" href="https://www.facebook.com/newspayper.fr"><i class="large facebook f icon social"></i></a>
+            <a target="_blank" href="https://twitter.com/newspayper_fr"><i class="large twitter icon social"></i></a>
+            <a target="_blank" href="https://medium.com/newspayper"><i class="large medium m icon social"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/company/newspayper.fr/"><i class="large linkedin in icon social"></i></a>         
+        </div>
+        <div class="column">
+          <span>Made with <img class="ui mini spaced image" src="img/watermelon.png"> in Paris, France by </span><img class="ui spaced image" id="footer-logo" src="img/logo.png">          
+        </div>  
+        <div class="column">
+          <button class="ui inverted basic button" onclick="window.location.href='mailto:contact@newspayper.fr'">Professionels ? Contactez-nous !</button>          
+        </div>             
+      </div>
+
+      <div class="footer ext-align center aligned black mobile only row">
+        <div class="column">
+            <a target="_blank" href="https://www.facebook.com/newspayper.fr"><i class="large facebook f icon social"></i></a>
+            <a target="_blank" href="https://twitter.com/newspayper_fr"><i class="large twitter icon social"></i></a>
+            <a target="_blank" href="https://medium.com/newspayper"><i class="large medium m icon social"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/company/newspayper.fr/"><i class="large linkedin in icon social"></i></a>         
+        </div>
+        <div class="column">
+          <button class="ui inverted basic button" onclick="window.location.href='mailto:contact@newspayper.fr'">Professionels ? Contactez-nous !</button>          
+        </div>  
+        <div class="column">
+          <span>Made with <img class="ui mini spaced image" src="img/watermelon.png"> in Paris, France by </span><img class="ui spaced image" id="footer-logo" src="img/logo.png">          
+        </div>        
+      </div>
+
+    </div>
+</div>
+
+  
+
+<!-- Chargement scripts -->
+
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script src="js/index.js"></script>
+
+
+</body>
+
+</html>
